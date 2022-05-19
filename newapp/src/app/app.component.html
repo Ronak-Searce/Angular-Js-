@@ -1,0 +1,56 @@
+<div class = "main">
+  <div class = "top" >
+    <input type="number"  class="input1 " name="Clone"  [(ngModel)]="cloneval" >
+    
+    <input type="submit" class = "clone" value="Clone nth" (click)="onCloning(cloneval); addForm(); invalid=false"><br>
+    <!-- <p *ngIf="invalid==true">{{textval}}</p> -->
+    <input type="number" class="input1 " name="Remove" [(ngModel)]="indexval">
+    <input type="submit" class = "clone" value="Remove nth" (click)="removeForm(indexval)">
+  <br>
+  </div>
+  
+  
+  <div class = "Mid">
+    <div class = "Push" >
+      
+      <input type="text"  placeholder="Input Text"  [(ngModel)]="FirstM" > <br>
+      <button type="submit" class = "Push1"  (click)=" Condition1=onClick(Condition1)"> Push Message</button>
+    </div>
+  
+  
+    <div class = "Push" >
+  
+      <input type="text" placeholder="Input Text" [(ngModel)]="SecondM"> <br>
+      <input type="submit"  class = "Push1" value="Push Message" (click)="Condition2=onClick(Condition2)">
+    </div>
+  
+    <div  class = "Push">
+  
+      <input type="text" placeholder="Input Text" [(ngModel)]="ThirdM"> <br>
+      <input type="submit" class = "Push1" value="Push Message" (click)="Condition3=onClick(Condition3)">
+    </div>
+
+    <div  class = "Push" *ngFor="let x of items;let i=index;">
+  
+      <input type="text" placeholder="Input Text"[(ngModel)]="model_val[i]" [value]="model_val[i]"> <br>
+      <input type="submit" class = "Push1" value="Push Message" (click)="Condition[counter]=onClick(Condition[counter])">
+    </div>
+
+
+  </div>
+
+  <div class = "bottom">
+    <p> Input: <span *ngIf="Condition1==true">{{FirstM}} </span> <input type="submit" class=" remove" value="remove" (click)="FirstM=onRemove(FirstM);Condition1=onClick2(Condition1)"></p>
+    <p> Input: <span *ngIf="Condition2==true">{{SecondM}} </span> <input type="submit" class=" remove" value="remove"(click)="SecondM=onRemove(SecondM);Condition2=onClick2(Condition2)"></p>
+    <p> Input:<span *ngIf="Condition3==true">{{ThirdM}} </span> <input type="submit" class=" remove" value="remove"(click)="ThirdM=onRemove(ThirdM);Condition3=onClick2(Condition3)"></p>
+    <div *ngFor="let x of items;">
+      <p> Input:<span *ngIf="Condition[counter]==true">{{x}} </span> <input type="submit" class=" remove" value="remove"(click)="textval=onRemove(textval);Condition[counter]=onClick2(Condition[counter])"></p>
+    </div>
+  </div>
+
+
+
+
+
+
+</div>

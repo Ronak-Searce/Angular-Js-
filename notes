@@ -1,0 +1,3 @@
+modules are to bundle the components into packages.
+components are used to creat the web pages
+Creating components using CLI - ng g c nameofcomponent

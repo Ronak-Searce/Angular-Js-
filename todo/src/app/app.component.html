@@ -1,0 +1,56 @@
+
+<div class="container">
+	<div class="row bg-info justify-content-center
+			align-items-center" style="height:60px">
+		
+		<div class="col-3 h2">
+			TO-DO List
+		</div>
+	</div>
+
+	
+	<div class="row " style="height:60px;">
+		<div class="col-3 "></div>
+		<div class="col-12 bg-secondary d-flex
+					justify-content-center align-items-center
+					text-light h3">
+
+			<input [(ngModel)]="newTask" type="text"
+					 class="col-7 form-control "
+						style="width:250px; " placeholder="Add Your Task Here">
+
+			<div class="col-1"></div>
+
+			<button (click)="addToList()"
+				class="btn btn-light text-success">
+				ADD TASK
+			</button>
+		</div>
+
+		
+	</div>
+
+
+	<div *ngFor="let x of items; let index = index;"
+			class="row mt-1" style="height:50px;">
+
+		<div class="col-3 "></div>
+
+		<div class="col-md-6 bg-secondary d-flex
+					justify-content-center align-items-center
+					text-light h2">
+
+			<div class="col-9 " style="color: #6FB2D2;">{{x}}  
+				<div class=" col-9 h6" style="color: #1B1A17 ;">{{now}} </div>
+			
+			</div>
+			
+		
+			<input (click)="deleteTask(index)" type="button"
+				value="Delete" class="col-2 btn btn-danger">
+			
+		</div>
+		
+		
+	</div>
+</div>

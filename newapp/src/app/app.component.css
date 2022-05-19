@@ -1,0 +1,50 @@
+.main {
+    border: 1px solid black;
+    margin: 25px;
+}
+
+.top {
+    border: 10px solid white
+}
+
+
+.Push {
+    background-color: grey;
+    border: solid 2px black;
+    
+    right: 0px;
+    width: 100%;
+    border: 10px solid white;
+    padding: 10px;
+    text-align:right;
+}
+
+.clone {
+    background-color: rgba(6, 232, 232, 0.393);
+    border-radius: 5px
+}
+
+.Push1 {
+    background-color: lightblue;
+    border-radius: 5px
+}
+
+.input1 {
+    border: solid 2px grey;
+    
+}
+
+.bottom {
+    border: 1px solid black;
+    margin: 25px;
+    width: 300px;
+    padding: 10px;
+
+}
+
+.remove {
+    background-color: white;
+    color: blue;
+    border: 0px solid white;
+    
+}
